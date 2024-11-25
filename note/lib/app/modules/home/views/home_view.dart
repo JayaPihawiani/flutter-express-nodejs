@@ -23,7 +23,7 @@ class HomeView extends GetView<HomeController> {
             }
 
             return Obx(() => controller.datas.length == 0
-                ? Center(child: Text('data'))
+                ? Center(child: Text('Tidak ada data Note!'))
                 : ListView.builder(
                     itemCount: controller.datas.length,
                     itemBuilder: (context, index) {
@@ -42,9 +42,9 @@ class HomeView extends GetView<HomeController> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10)),
                               width: Get.width,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                              child: Wrap(
+                                // mainAxisAlignment:
+                                //     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Column(
                                     crossAxisAlignment:
